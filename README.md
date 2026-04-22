@@ -20,6 +20,10 @@
 Отчет по настройке ssh подключения к серверу.
 * **Сделано по задаче из:** [SSH Remote Server Setup](https://roadmap.sh/projects/ssh-remote-server-setup)
 
+### 5. [static site server](./static-site-server)
+Отчет по настройке сайта на linux сервере
+* **Сделано по задаче из:** [Static site server](https://roadmap.sh/projects/static-site-server)
+
 ---
 
 # Roadmap.sh DevOps Projects (English Version)
@@ -43,3 +47,7 @@ A script for parsing Nginx access logs to extract and display specific analytica
 ### 4. [SSH Security & Configuration Lab](./ssh_remote_setup)
 Report on setting up an SSH connection to the server.
 * **Based on:** [SSH Remote Server Setup](https://roadmap.sh/projects/ssh-remote-server-setup)
+
+### 5. [static site server](./static-site-server)
+Report on setting up a site on linux server
+* **Based on:** [Static site server](https://roadmap.sh/projects/static-site-server)
