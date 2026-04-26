@@ -1,3 +1,8 @@
+---
+layout: default
+title: Server Performance Stats
+---
+
 # Server Performance Stats script
 
 `RUSSIAN:`
@@ -47,3 +52,5 @@ chmod +x server-stats.sh
 ```bash
 bash server-stats.sh
 ```
+### Project files:
+- [server-stats.sh](https://github.com/Zakerru/Roadmap-sh-devops-projects/blob/main/statistics-script/server-stats.sh)

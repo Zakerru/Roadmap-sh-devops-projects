@@ -1,3 +1,8 @@
+---
+layout: default
+title: Nginx Web Server Setup
+---
+
 # Nginx Web Server Setup & Multi-Site Configuration
 
 Этот проект посвящен установке веб-сервера Nginx на Ubuntu Server и настройке хостинга для нескольких сайтов (Virtual Hosts) с использованием современных инструментов синхронизации.

@@ -1,0 +1,9 @@
+theme: jekyll-theme-slate
+title: My roadmap projects
+description: Reports on roadmap.sh projects
+include:
+  - folder_cleaner
+  - statistics-script
+  - static-site-server
+  - ssh_remote_setup
+  - Nginx_analiser

@@ -1,3 +1,8 @@
+---
+layout: default
+title: Folder cleaner & archiver
+---
+
 # Folder cleaner & archiver
 
 * Russian:
@@ -51,3 +56,7 @@ After this, you can run it manually.
 Alternatively, use the graphical interface
 
 The idea for writing the script was taken from https://roadmap.sh/projects/log-archive-tool , modified to suit my personal needs
+
+### Project file list:
+- [download-cleaner.sh](https://github.com/Zakerru/Roadmap-sh-devops-projects/blob/main/folder_cleaner/download-cleaner.sh)
+- [config.conf](https://github.com/Zakerru/Roadmap-sh-devops-projects/blob/main/folder_cleaner/config.conf)
