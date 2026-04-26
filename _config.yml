@@ -7,3 +7,4 @@ include:
   - static-site-server
   - ssh_remote_setup
   - Nginx_analiser
+  - pages-deployment

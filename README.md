@@ -20,9 +20,13 @@
 Отчет по настройке ssh подключения к серверу.
 * **Сделано по задаче из:** [SSH Remote Server Setup](https://roadmap.sh/projects/ssh-remote-server-setup)
 
-### 5. [static site server](./static-site-server)
+### 5. [Static site server](./static-site-server)
 Отчет по настройке сайта на linux сервере
 * **Сделано по задаче из:** [Static site server](https://roadmap.sh/projects/static-site-server)
+
+### 6. [GitHub Pages Deployment](./pages-deployment)
+Отчет по созданию веб-страницы репозитория GitHub
+* **Сделано по задаче из:** [GitHub Pages Deployment](https://roadmap.sh/projects/github-actions-deployment-workflow)
 
 ---
 
@@ -51,3 +55,7 @@ Report on setting up an SSH connection to the server.
 ### 5. [static site server](./static-site-server)
 Report on setting up a site on linux server
 * **Based on:** [Static site server](https://roadmap.sh/projects/static-site-server)
+
+### 6. [GitHub Pages Deployment](./pages-deployment)
+GitHub Repository Web Page Creation Report
+* **Based on:** [GitHub Pages Deployment](https://roadmap.sh/projects/github-actions-deployment-workflow)

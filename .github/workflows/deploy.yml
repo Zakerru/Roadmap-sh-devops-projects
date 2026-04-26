@@ -3,7 +3,12 @@ name: Deploy Jekyll with GitHub Pages dependencies
 on:
   push:
     branches: ["main"]
-
+    paths:
+      - "index.html"
+      - "_config.yml"
+      - "**/README.md"
+      - "assets/**"
+      - "!README.md"
 permissions:
   contents: read
   pages: write
