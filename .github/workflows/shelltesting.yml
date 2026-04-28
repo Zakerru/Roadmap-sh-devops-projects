@@ -1,0 +1,45 @@
+name: Sh scripts syntest
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "**/*.sh"
+  pull_request:
+    branches: ["main"]
+    paths:
+      - "**/*.sh"
+jobs:
+  gather:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: getlist
+        id: list
+        uses: SkyHighGrowth/gha-changed-files@v42
+        with:
+          files: "**/*.sh"
+      - name: emptycheck
+        env:
+          changedfiles: ${{ steps.list.outputs.all_changed_files }}
+        run: |
+          if [ -z "${changedfiles}" ]; then
+            echo "No files to check"
+            exit 0
+          else
+            i=0
+            for file in $changedfiles; do
+              if [ -f "$file" ]; then
+                echo "Checking $file..."
+                if ! shellcheck "$file"; then
+                  echo "error in $file"
+                  i=1
+                fi
+              else
+                echo "Skipping $file: file deleted or not found"
+              fi
+            done
+
+            exit $i
+          fi
