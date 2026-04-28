@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v4
       - name: getlist
         id: list
-        uses: SkyHighGrowth/gha-changed-files@v42
+        uses: SkyHighGrowth/gha-changed-files@v1
         with:
           files: "**/*.sh"
       - name: emptycheck
