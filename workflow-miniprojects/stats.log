@@ -1,0 +1,34 @@
+Disks usage:
+Name                           Size                 Used                 Available            Usage%              
+/dev/root                      145G                 56G                  90G                  39%                 [0m[0m
+/dev/sda16                     881M                 64M                  756M                 8%                  [0m[0m
+/dev/sda15                     105M                 6.2M                 99M                  6%                  [0m[0m
+
+Total CPU usage:2.4%[0m
+
+Memory usage:
+ free:15279924 KiB
+ used:1093544 KiB
+ Total usage:[0m6%[0m
+
+Top 5 processes for CPU usage:
+NAME                                                                                                %CPU
+Runner.Worker                                                                                       9.1%
+watchdogd                                                                                           0.0%
+udisksd                                                                                             0.0%
+top                                                                                                 0.0%
+systemd-udevd                                                                                       0.0%
+
+Top 5 processes for Memory usage:
+NAME                                                                                                %MEM
+Runner.Worker                                                                                       0.7%
+Runner.Listener                                                                                     0.6%
+provjobd2857926                                                                                     0.5%
+dockerd                                                                                             0.5%
+php-fpm8.3                                                                                          0.3%
+
+OS version: Ubuntu 24.04.4 LTS
+Core version: 6.17.0-1010-azure
+
+System started on: 2026-04-28 02:09:24
+Uptime:  02:09:58 up 0 min,  0 user,  load average: 1.56, 0.42, 0.14
