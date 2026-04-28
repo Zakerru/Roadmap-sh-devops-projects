@@ -17,5 +17,4 @@ jobs:
         git config user.name "GitHub Actions Bot"
         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git add workflow-miniprojects/stats.log
-        git commit -m "Auto-update system report"
         git diff-index --quiet HEAD || (git commit -m "Auto-update system report" && git push origin main)
