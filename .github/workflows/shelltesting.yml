@@ -2,14 +2,14 @@ name: Sh scripts syntest
 
 on:
   workflow_dispatch:
-  push:
-    branches: ["main"]
-    paths:
-      - "**/*.sh"
-  pull_request:
-    branches: ["main"]
-    paths:
-      - "**/*.sh"
+#  push:
+#    branches: ["main"]
+#    paths:
+#      - "**/*.sh"
+#  pull_request:
+#    branches: ["main"]
+#    paths:
+#      - "**/*.sh"
 jobs:
   gather:
     runs-on: ubuntu-latest

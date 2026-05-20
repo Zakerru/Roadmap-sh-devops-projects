@@ -1,0 +1,20 @@
+name: Monitoring run
+
+on:
+  workflow_dispatch:
+#  schedule:
+#    - cron: '*/30 * * * *'
+jobs:
+  checking:
+    runs-on: ubuntu-latest
+    env:
+      TG_TOKEN: ${{ secrets.TG_TOKEN }}
+      TG_CODE: ${{ secrets.TG_CODE }}
+      DS_WEBHOOK: ${{ secrets.DS_WEBHOOK }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run Monitoring Script
+        run: |
+          chmod +x ./simple-monitoring/health-check.sh
+          ./simple-monitoring/health-check.sh

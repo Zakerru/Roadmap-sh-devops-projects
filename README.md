@@ -9,7 +9,7 @@
 * **Сделано по задаче из:** [Log Archive Tool](https://roadmap.sh/projects/log-archive-tool)
 
 ### 2. [Server Performance Stats script](./statistics-script)
-Утилита для мониторинга производительности системы в реальном времени.
+Утилита для мониторинга производительности системы в реальном времени
 * **Сделано по задаче из:** [Server Stats](https://roadmap.sh/projects/server-stats)
 
 ### 3. [Nginx Log Analyser](./Nginx_analiser)
@@ -17,7 +17,7 @@
 * **Сделано по задаче из:** [Nginx Log Analyser](https://roadmap.sh/projects/nginx-log-analyser)
 
 ### 4. [SSH Security & Configuration Lab](./ssh_remote_setup)
-Отчет по настройке ssh подключения к серверу.
+Отчет по настройке ssh подключения к серверу
 * **Сделано по задаче из:** [SSH Remote Server Setup](https://roadmap.sh/projects/ssh-remote-server-setup)
 
 ### 5. [Static site server](./static-site-server)
@@ -27,6 +27,13 @@
 ### 6. [GitHub Pages Deployment](./pages-deployment)
 Отчет по созданию веб-страницы репозитория GitHub
 * **Сделано по задаче из:** [GitHub Pages Deployment](https://roadmap.sh/projects/github-actions-deployment-workflow)
+
+### 7. [Workflow mini projects](./workflow-miniprojects)
+Отчет по выполнению нескольких практических задач
+
+### 8. [Simple monitoring](./simple-monitoring)
+Проект об установке и настройке мониторинга на linux сервер, а так же настройке алертинга
+* **Сделано по задаче из:** [Simple monitoring](https://roadmap.sh/projects/simple-monitoring-dashboard)
 
 ---
 
@@ -59,3 +66,10 @@ Report on setting up a site on linux server
 ### 6. [GitHub Pages Deployment](./pages-deployment)
 GitHub Repository Web Page Creation Report
 * **Based on:** [GitHub Pages Deployment](https://roadmap.sh/projects/github-actions-deployment-workflow)
+
+### 7. [Workflow mini projects](./workflow-miniprojects)
+Reprort on completing some practical tasks
+
+### 8. [Simple monitoring](./simple-monitoring)
+A project on setting up and configuring monitoring for a Linux server, as well as configuring alerting
+* **Based on:** [Simple monitoring](https://roadmap.sh/projects/simple-monitoring-dashboard)
