@@ -35,6 +35,14 @@
 Проект об установке и настройке мониторинга на linux сервер, а так же настройке алертинга
 * **Сделано по задаче из:** [Simple monitoring](https://roadmap.sh/projects/simple-monitoring-dashboard)
 
+### 9. [Systemd Service](./Systemd-Service)
+Отчет по созданию сервиса systemd
+* **Сделано по задаче из:** [Dummy Systemd Service](https://roadmap.sh/projects/dummy-systemd-service)
+
+### 10. [DNS Setup](./DNS-Setup)
+Проект по настройке собственного доменного имени
+* **Сделано по задаче из:** [Basic DNS Setup](https://roadmap.sh/projects/basic-dns)
+
 ---
 
 # Roadmap.sh DevOps Projects (English Version)
@@ -73,3 +81,11 @@ Reprort on completing some practical tasks
 ### 8. [Simple monitoring](./simple-monitoring)
 A project on setting up and configuring monitoring for a Linux server, as well as configuring alerting
 * **Based on:** [Simple monitoring](https://roadmap.sh/projects/simple-monitoring-dashboard)
+
+### 9. [Systemd Service](./Systemd-Service)
+Report on setting up a systemd service
+* **Based on:** [Dummy Systemd Service](https://roadmap.sh/projects/dummy-systemd-service)
+
+### 10. [DNS Setup](./DNS-Setup)
+A project on configuring a castom domain name
+* **Based on:** [Basic DNS Setup](https://roadmap.sh/projects/basic-dns)

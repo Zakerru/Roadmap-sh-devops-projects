@@ -1,4 +1,12 @@
 theme: jekyll-theme-slate
+url: "https://zakerru.site"
+baseurl: ""
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
 title: My roadmap projects
 description: Reports on roadmap.sh projects
 include:
@@ -10,3 +18,5 @@ include:
   - pages-deployment
   - workflow-miniprojects
   - simple-monitoring
+  - Systemd-Service
+  - DNS-Setup

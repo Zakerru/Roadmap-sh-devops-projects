@@ -1,0 +1,18 @@
+[Unit]
+Description=Simple Monitoring Orchestrator
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=seriojka
+
+WorkingDirectory=/home/seriojka/DevOps_learning_folder/old_scripts/Roadmapsh_devops_projects/Systemd-Service
+
+ExecStart=/home/seriojka/DevOps_learning_folder/old_scripts/Roadmapsh_devops_projects/simple-monitoring/workflow.sh
+
+Restart=always
+
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
