@@ -35,7 +35,7 @@ title: DNS Setup
 Чтобы GitHub начал принимать запросы по новому адресу, потребовалась настройка самого репозитория:
 1. В настройках репозитория (`Settings` -> `Pages`) в поле **Custom domain** был указан адрес `zakerru.site`.
 2. GitHub автоматически создал файл `CNAME` в корне репозитория для фиксации этого имени.
-3. Дождавшись проверки DNS со стороны GitHub, была включена опция **Enforce HTTPS**, чтобы сам GitHub также выписал внутренний SSL-сертификат (Let's Encrypt) для корректной работы связки Cloudflare ↔ GitHub.
+3. Дождавшись проверки DNS со стороны GitHub, была включена опция **Enforce HTTPS**, чтобы сам GitHub также выписал внутренний SSL-сертификат (Let's Encrypt) для корректной работы связки Cloudflare <-> GitHub.
 
 ### Шаг 4. Конфигурация DNS-записей в Cloudflare
 Для маршрутизации трафика на серверы GitHub были добавлены соответствующие `A` и `CNAME` записи. 
@@ -74,10 +74,10 @@ title: DNS Setup
 1. Домен (`zakerru.site`) привязан к аккаунту Cloudflare.
 2. В разделе **SSL/TLS -> Client Certificates** сгенерирован клиентский сертификат (формат PEM).
 3. Исходные ключи (Private Key и Certificate) сохранены локально и конвертированы в формат `PKCS#12 (.p12)` для поддержки браузерами и мобильными ОС:
+
    ```bash
    openssl pkcs12 -export -out router-client.p12 -inkey cloudflare.key -in cloudflare.crt
-
-```
+   ```
 
 4. На вкладке **Hosts** (в разделе Client Certificates) для поддомена `router.zakerru.site` включено обязательное требование сертификата (**Required**).
 
@@ -214,6 +214,7 @@ Instead of traditional Port Forwarding—which leaves the router vulnerable to s
 1. The domain (`zakerru.site`) has been linked to a Cloudflare account.
 2. A client certificate (in PEM format) has been generated within the **SSL/TLS -> Client Certificates** section.
 3. The original keys (Private Key and Certificate) have been saved locally and converted to the `PKCS#12 (.p12)` format to ensure compatibility with web browsers and mobile operating systems:
+
 ```bash
 openssl pkcs12 -export -out router-client.p12 -inkey cloudflare.key -in cloudflare.crt
 
