@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Simple monitoring
+title: "Simple monitoring"
+description: "A project on setting up and configuring monitoring for a Linux server, as well as configuring alerting"
 ---
 
 # Simple Monitoring

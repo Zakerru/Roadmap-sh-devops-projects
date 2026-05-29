@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Server Performance Stats
+title: "Systemd Service"
+description: "Report on setting up script from previous project as systemd service"
 ---
 
 # SYSTEMD SERVICE

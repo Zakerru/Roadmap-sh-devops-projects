@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Folder cleaner & archiver
+title: "Folder cleaner"
+description: "Script for automatic folder cleaning"
 ---
 
 # Folder cleaner & archiver

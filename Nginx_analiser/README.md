@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Nginx Log Analyser
+title: "Nginx log analyser"
+description: "A script for parsing Nginx access logs"
 ---
 
 # Nginx Log Analyser

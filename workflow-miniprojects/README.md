@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Workflow practice
+title: "Workflow mini projects"
+description: "Reprort on completing some practical tasks"
 ---
 
 После выполнения проекта GitHub Pages я не очень хорошо разобрался в структуре и сути работы yml-файлов и интерфейсе самого GitHub, так что решил выполнить 3 придуманные задачи для закрепления этой информации.

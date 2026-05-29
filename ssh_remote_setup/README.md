@@ -1,6 +1,6 @@
 ---
-layout: default
-title: SSH Security & Configuration
+title: "SSH Security and Configuration Lab"
+description: "Report on setting up an SSH connection to the server"
 ---
 
 # SSH Security & Configuration Lab

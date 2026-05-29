@@ -1,6 +1,6 @@
 ---
-layout: default
-title: GitHub Pages Deployment Project
+title: "GitHub Pages Deployment"
+description: "Report on deploying a static site via GitHub Pages and CI/CD"
 ---
 # Развертывание статического сайта через GitHub Pages и CI/CD
 

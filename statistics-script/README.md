@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Server Performance Stats
+title: "Server performance stats script"
+description: "Server statistics viewing script"
 ---
 
 # Server Performance Stats script

@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Nginx Web Server Setup
+title: "Static site server"
+description: "Report on setting up a site on linux server"
 ---
 
 # Nginx Web Server Setup & Multi-Site Configuration
