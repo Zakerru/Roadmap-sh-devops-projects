@@ -1,6 +1,7 @@
 ---
-layout: default
-title: DNS Setup
+
+title: "DNS Setup"
+description: "A project on configuring a castom domain name"
 ---
 
 # Basic DNS Setup
