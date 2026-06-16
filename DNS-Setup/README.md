@@ -283,5 +283,5 @@ To access the router interface:
 
 ---
 ### Project files:
-- [config.yml](https://github.com/Zakerru/Roadmap-sh-devops-projects/blob/main/DNS-setup/config.yml)
-- [zzz_cloudflared_ram](https://github.com/Zakerru/Roadmap-sh-devops-projects/blob/main/DNS-setup/zzz_cloudflared_ram)
+- [config.yml](https://github.com/Zakerru/Roadmap-sh-devops-projects/blob/main/DNS-Setup/config.yml)
+- [zzz_cloudflared_ram](https://github.com/Zakerru/Roadmap-sh-devops-projects/blob/main/DNS-Setup/zzz_cloudflared_ram)

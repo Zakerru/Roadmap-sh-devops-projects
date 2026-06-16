@@ -20,3 +20,4 @@ include:
   - simple-monitoring
   - Systemd-Service
   - DNS-Setup
+  - Docker

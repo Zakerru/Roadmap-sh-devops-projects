@@ -43,6 +43,10 @@
 Проект по настройке собственного доменного имени
 * **Сделано по задаче из:** [Basic DNS Setup](https://roadmap.sh/projects/basic-dns)
 
+### 11. [Docker project](./Docker)
+Проект по настройке многоконтейнерной архитектуры используя Docker
+* **Сделано по задаче из:** [Basic Dockerfile](https://roadmap.sh/projects/basic-dockerfile)
+
 ---
 
 # Roadmap.sh DevOps Projects (English Version)
@@ -89,3 +93,7 @@ Report on setting up a systemd service
 ### 10. [DNS Setup](./DNS-Setup)
 A project on configuring a castom domain name
 * **Based on:** [Basic DNS Setup](https://roadmap.sh/projects/basic-dns)
+
+### 11. [Docker project](./Docker)
+A project to set up a multi-container architecture in Docker
+* **Based on:** [Basic Dockerfile](https://roadmap.sh/projects/basic-dockerfile)

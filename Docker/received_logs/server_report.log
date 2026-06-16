@@ -1,0 +1,17 @@
+
+Top 5 IP addresses with most requests:
+192.168.1.180 - 64 requests
+192.168.1.212 - 11 requests
+
+Top 5 response status codes:
+404 - 32 requests
+200 - 32 requests
+304 - 11 requests
+
+Top 5 most requested paths:
+/ - 43 requests
+/favicon.ico - 32 requests
+
+Top 5 most requested user agents:
+Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:151.0) Gecko/20100101 Firefox/151.0 - 64 requests
+Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Mobile Safari/537.36 - 11 requests
