@@ -34,7 +34,9 @@ docker network create my_monitoring_net
 * Порт изменен на внутренний `80` (вместо хостового `8081`), так как изоляция портов теперь управляется на уровне Docker.
 * Изменен путь логирования: `access_log /mylogs/nginx-access.log;` для последующего маппинга на постоянный том.
 * Добавлен эндпоинт метрик для мониторинга:
+
 ```nginx
+
 location /stub_status {
     stub_status;
     allow all; # Разрешено, так как доступ ограничен изолированной сетью Docker
@@ -219,7 +221,9 @@ A static server site project was used as a basis. The Nginx configuration (`site
 * The port has been changed to internal `80` (instead of the host `8081`), since port isolation is now managed at the Docker level.
 * The logging path has been changed: `access_log /mylogs/nginx-access.log;` for subsequent mapping to a persistent volume.
 * Added a metrics endpoint for monitoring:
+
 ```nginx
+
 location /stub_status {
 stub_status;
 allow all; # Allowed because access is restricted to an isolated Docker network
