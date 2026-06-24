@@ -1,28 +1,23 @@
 global:
   dockerUsername: "zakerru78@gmail.com"
-
 parser:
   imageName: "parser"
   enabled: true
-  imageTag: "a1b2c3d"
-
+  imageTag: "50f4af9"
 sites:
   site1:
     enabled: true
     replicas: 2
-    imageTag: "a1b2c3d"
-
+    imageTag: "50f4af9"
   site2:
     enabled: true
     replicas: 1
-    imageTag: "a1b2c3d"
-
+    imageTag: "50f4af9"
   site3:
     enabled: false
     replicas: 0
-    imageTag: "a1b2c3d"
-
+    imageTag: "50f4af9"
   site4:
     enabled: true
     replicas: 1
-    imageTag: "a1b2c3d"
+    imageTag: "50f4af9"
