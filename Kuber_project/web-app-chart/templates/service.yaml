@@ -1,0 +1,16 @@
+{{- range $siteName, $siteConfig := .Values.sites }}
+{{- if $siteConfig.enabled }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-{{ $siteName }}
+spec:
+
+  selector:
+    app: nginx-{{ $siteName }}
+  ports:
+    - port: 80
+      targetPort: 80
+{{- end }}
+{{- end }}

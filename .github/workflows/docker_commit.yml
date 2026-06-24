@@ -1,0 +1,70 @@
+name: Push images for sites
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "Kuber_project/sites/**"
+      - "Kuber_project/parcerdoc/**"
+
+jobs:
+  building:
+    runs-on: ubuntu-latest
+    env:
+      DOC_USR: ${{ secrets.DOCKER_USERNAME }}
+      DOC_PASS: ${{ secrets.DOCKER_PASSWORD }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Get Short Commit SHA
+        id: vars
+        run: |
+          echo "SHORT_SHA=$(echo ${GITHUB_SHA::7})" >> $GITHUB_ENV
+
+      - name: Image building and push
+        run: |
+          docker login -u ${DOC_USR} -p ${DOC_PASS}
+          CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD)
+          echo "Changed files in this commit:"
+          echo "$CHANGED_FILES"
+
+          for folder in Kuber_project/sites/site*; do
+            if [ -d "$folder" ]; then
+              SITE_NAME=$(basename $folder)
+
+              if echo "$CHANGED_FILES" | grep -q "$folder"; then
+
+                docker build -f Kuber_project/sites/Dockerfile -t ${DOC_USR}/nginx-${SITE_NAME}:${SHORT_SHA} ${folder}
+                docker push ${DOC_USR}/nginx-${SITE_NAME}:${SHORT_SHA}
+
+                echo "Updating tag in values.yaml for $SITE_NAME..."
+                yq -i ".sites.${SITE_NAME}.imageTag = \"${SHORT_SHA}\"" Kuber_project/web-app-chart/values.yaml
+              fi
+            fi
+          done
+
+          PARSER_DIR="Kuber_project/parcerdoc"
+          if echo "$CHANGED_FILES" | grep -q "$PARSER_DIR"; then
+
+            docker build -t ${DOC_USR}/parser:${SHORT_SHA} ${PARSER_DIR}
+            docker push ${DOC_USR}/parser:${SHORT_SHA}
+
+            echo "Updating tag in values.yaml for parser..."
+            yq -i ".parser.imageTag = \"${SHORT_SHA}\"" Kuber_project/web-app-chart/values.yaml
+          fi
+
+
+      - name: Commit and Push updated values.yaml
+        run: |
+
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add Kuber_project/web-app-chart/values.yaml
+
+          git diff-index --quiet HEAD || git commit -m "chore: update tags to ${SHORT_SHA} [skip ci]"
+
+          git push origin main

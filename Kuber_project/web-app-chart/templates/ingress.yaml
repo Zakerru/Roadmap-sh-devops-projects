@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: web-app-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+  {{- range $siteName, $siteConfig := .Values.sites }}
+  {{- if $siteConfig.enabled }}
+
+  - host: {{ $siteName }}.loc
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: service-{{ $siteName }}
+            port:
+              number: 80
+  {{- end }}
+  {{- end }}

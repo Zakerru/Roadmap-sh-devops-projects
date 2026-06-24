@@ -1,0 +1,70 @@
+{{- range $siteName, $siteConfig := .Values.sites }}
+{{- if $siteConfig.enabled }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-{{ $siteName }}
+  labels:
+    app: nginx-{{ $siteName }}
+spec:
+  replicas: {{ $siteConfig.replicas }}
+  selector:
+    matchLabels:
+      app: nginx-{{ $siteName }}
+  template:
+    metadata:
+      labels:
+        app: nginx-{{ $siteName }}
+    spec:
+      volumes:
+        - name: shared-logs
+          emptyDir:
+            sizeLimit: 50Mi
+
+      containers:
+
+        - name: nginx
+          image: "{{ $.Values.global.dockerUsername }}/nginx-{{ $siteName }}:{{ $siteConfig.imageTag }}"
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "500Mi"
+          ports:
+            - containerPort: 80
+
+          # Пробы (Healthchecks)
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 15
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 2
+            periodSeconds: 10
+
+          volumeMounts:
+            - name: shared-logs
+              mountPath: /var/log/nginx
+
+        {{- if $.Values.parser.enabled }}
+        - name: parser
+          image: "{{ $.Values.global.dockerUsername }}/{{ $.Values.parser.imageName }}:{{ $.Values.parser.imageTag }}"
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "1000Mi"
+          env:
+
+            - name: SITE_NAME
+              value: "{{ $siteName }}"
+          volumeMounts:
+            - name: shared-logs
+              mountPath: /var/log/nginx
+        {{- end }}
+{{- end }}
+{{- end }}
