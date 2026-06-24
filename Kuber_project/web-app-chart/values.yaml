@@ -1,5 +1,5 @@
 global:
-  dockerUsername: "zakerru78@gmail.com"
+  dockerUsername: "zakerru"
 parser:
   imageName: "parser"
   enabled: true
