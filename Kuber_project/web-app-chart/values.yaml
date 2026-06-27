@@ -3,7 +3,7 @@ global:
 parser:
   imageName: "parser"
   enabled: true
-  imageTag: "50f4af9"
+  imageTag: "132a9a2"
 sites:
   site1:
     enabled: true
