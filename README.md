@@ -47,6 +47,9 @@
 Проект по настройке многоконтейнерной архитектуры используя Docker
 * **Сделано по задаче из:** [Basic Dockerfile](https://roadmap.sh/projects/basic-dockerfile)
 
+### 12. [kubernetes project](./Kuber_project)
+Проект по настройке кластера и CI/CD при помощи Kubernetes
+
 ---
 
 # Roadmap.sh DevOps Projects (English Version)
@@ -97,3 +100,6 @@ A project on configuring a castom domain name
 ### 11. [Docker project](./Docker)
 A project to set up a multi-container architecture in Docker
 * **Based on:** [Basic Dockerfile](https://roadmap.sh/projects/basic-dockerfile)
+
+### 12. [kubernetes project](./Kuber_project)
+Project to set up a cluster and CI/CD using Kubernetes

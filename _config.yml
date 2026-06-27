@@ -21,3 +21,4 @@ include:
   - Systemd-Service
   - DNS-Setup
   - Docker
+  - Kuber_project

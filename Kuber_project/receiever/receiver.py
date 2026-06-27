@@ -1,5 +1,6 @@
 from flask import Flask, request
 import os
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -14,18 +15,20 @@ def upload_file():
     file = request.files['file']
 
     site_name = request.form.get('site', 'unknown_site')
-
     site_name = "".join(c for c in site_name if c.isalnum() or c in ('-', '_')).strip()
 
     site_folder = os.path.join(BASE_UPLOAD_FOLDER, site_name)
     os.makedirs(site_folder, exist_ok=True)
 
-    save_path = os.path.join(site_folder, 'server_report.log')
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+
+    filename = f"server_report_{timestamp}.log"
+    save_path = os.path.join(site_folder, filename)
+
     file.save(save_path)
 
     print(f"--- [УСПЕХ] Получен отчет от сайта: {site_name}. Сохранен в {save_path} ---")
     return f"Файл для сайта {site_name} успешно принят", 200
 
 if __name__ == '__main__':
-
     app.run(host='0.0.0.0', port=5000)

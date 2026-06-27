@@ -1,0 +1,16 @@
+
+Top 5 IP addresses with most requests:
+10.244.2.1 - 664 requests
+10.244.1.22 - 10 requests
+
+Top 5 response status codes:
+200 - 664 requests
+304 - 10 requests
+
+Top 5 most requested paths:
+/ - 672 requests
+/page2.html - 2 requests
+
+Top 5 most requested user agents:
+kube-probe/1.30 - 664 requests
+Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:152.0) Gecko/20100101 Firefox/152.0 - 10 requests

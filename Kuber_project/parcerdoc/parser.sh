@@ -5,6 +5,8 @@ SITE_NAME="${SITE_NAME:-unknown_site}"
 LOG_FILE="/var/log/nginx/nginx-access.log"
 REPORT_FILE="/tmp/analyzer_report.log"
 
+sleep 15
+
 while true; do
     if [ -f "$LOG_FILE" ]; then
         echo "$(date): analysing $SITE_NAME"

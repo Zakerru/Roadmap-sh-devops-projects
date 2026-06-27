@@ -27,13 +27,12 @@ spec:
         - name: nginx
           image: "{{ $.Values.global.dockerUsername }}/nginx-{{ $siteName }}:{{ $siteConfig.imageTag }}"
           imagePullPolicy: Always
-          resources:
-            requests:
-              memory: "500Mi"
+#          resources:
+#            requests:
+#              memory: "500Mi"
           ports:
             - containerPort: 80
 
-          # Пробы (Healthchecks)
           livenessProbe:
             httpGet:
               path: /
@@ -55,9 +54,9 @@ spec:
         - name: parser
           image: "{{ $.Values.global.dockerUsername }}/{{ $.Values.parser.imageName }}:{{ $.Values.parser.imageTag }}"
           imagePullPolicy: Always
-          resources:
-            requests:
-              memory: "1000Mi"
+#          resources:
+#            requests:
+#              memory: "1000Mi"
           env:
 
             - name: SITE_NAME
