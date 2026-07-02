@@ -17,6 +17,8 @@ spec:
           prometheusSpec:
             remoteWrite:
               - url: "http://192.168.1.180:9090/api/v1/write"
+            serviceMonitorNamespaceSelector: {}
+            serviceMonitorSelectorNilUsesHelmValues: false
   destination:
     server: "https://kubernetes.default.svc"
     namespace: monitoring
