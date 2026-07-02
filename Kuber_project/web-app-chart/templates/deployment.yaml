@@ -50,15 +50,12 @@ spec:
             - name: shared-logs
               mountPath: /var/log/nginx
 
-        {{- if $.Values.nginx-exporter.enabled }}
         - name: nginx-exporter
           image: nginx/nginx-prometheus-exporter:latest
           args:
             - "-nginx.scrape-uri=http://localhost/stub_status"
           ports:
             - containerPort: 9113
-        {{- end }}
-
 
         {{- if $.Values.parser.enabled }}
         - name: parser
