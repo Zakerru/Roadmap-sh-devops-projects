@@ -1,5 +1,7 @@
 global:
   dockerUsername: "zakerru"
+nginx-exporter:
+  enabled: true
 parser:
   imageName: "parser"
   enabled: true
