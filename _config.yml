@@ -22,3 +22,4 @@ include:
   - DNS-Setup
   - Docker
   - Kuber_project
+  - Grafana-Prometeus_project

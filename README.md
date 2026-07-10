@@ -47,8 +47,11 @@
 Проект по настройке многоконтейнерной архитектуры используя Docker
 * **Сделано по задаче из:** [Basic Dockerfile](https://roadmap.sh/projects/basic-dockerfile)
 
-### 12. [kubernetes project](./Kuber_project)
+### 12. [Kubernetes project](./Kuber_project)
 Проект по настройке кластера и CI/CD при помощи Kubernetes
+
+### 13. [Grafana+Prometeus project](./Grafana-Prometeus_project)
+Настройка проекта мониторинга
 
 ---
 
@@ -103,3 +106,6 @@ A project to set up a multi-container architecture in Docker
 
 ### 12. [kubernetes project](./Kuber_project)
 Project to set up a cluster and CI/CD using Kubernetes
+
+### 13. [Grafana+Prometeus project](./Grafana-Prometeus_project)
+Configuring monitoring project

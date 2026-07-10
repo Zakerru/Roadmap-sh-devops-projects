@@ -1,0 +1,19 @@
+{{- range $siteName, $siteConfig := .Values.sites }}
+{{- if $siteConfig.enabled }}
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: monitor-{{ $siteName }}
+  labels:
+    release: prometheus-stack
+spec:
+  selector:
+    matchLabels:
+      app: nginx-{{ $siteName }}
+  endpoints:
+  - port: metrics
+    path: /metrics
+    interval: 15s
+{{- end }}
+{{- end }}
